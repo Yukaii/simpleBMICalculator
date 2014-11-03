@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Hello World</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="email_hint">xxxx@xxxx.com</string>
+    <string name="weight_hint">請輸入你的體重</string>
+    <string name="height_hint">請輸入你的身高</string>
+    <string name="calcuate_bmi_button_text">計算BMI值</string>
+
+    <string-array name="spinner_sex_list">
+    	<item>Male</item>
+    	<item>Female</item>
+    </string-array>
+
+</resources>
