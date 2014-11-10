@@ -13,6 +13,8 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TabHost;
+import android.widget.TabHost.TabSpec;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -40,6 +42,22 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
+		TabHost tabHost = (TabHost)findViewById(R.id.tab_host);
+		tabHost.setup();		
+
+		TabSpec spec = tabHost.newTabSpec("tab1");
+		spec.setContent(R.id.tab_bmi).setIndicator("BMI");
+
+
+		tabHost.addTab(spec);
+
+		spec = tabHost.newTabSpec("tab2");
+		spec.setContent(R.id.tab_rank).setIndicator("Rank");
+
+		tabHost.addTab(spec);
+
+		tabHost.setCurrentTab(0);
+
 		button_calculate_bmi = (Button) findViewById(R.id.main_calculate_bmi_button);
 		height_input = (EditText) findViewById(R.id.main_height_input);
 		weight_input = (EditText) findViewById(R.id.main_weight_input);
